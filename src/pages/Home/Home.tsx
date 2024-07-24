@@ -1,9 +1,9 @@
 import { useEffect, FC } from "react";
 
 import { useStore } from "@/features/search/model/store";
-import { Paginator } from "@/features/search/ui/Paginator";
+import { Paginator } from "@/features/search/ui/Paginator/Paginator.tsx";
 import { RepoList } from "@/features/search/ui/RepoList/RepoList";
-import { SearchInput } from "@/features/search/ui/SearchInput";
+import { SearchInput } from "@/features/search/ui/SearchInput/SearchInput.tsx";
 import { useLocalStorage } from "@/shared/hooks/useLocalStorage";
 import { Error } from "@/shared/ui/components/Error";
 import "./Home.css";

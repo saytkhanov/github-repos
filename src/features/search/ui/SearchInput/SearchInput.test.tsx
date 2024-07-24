@@ -1,8 +1,8 @@
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
-import { useStore } from "../model/store";
-import { SearchInput } from "./SearchInput";
+import { useStore } from "../../model/store.ts";
+import { SearchInput } from "./SearchInput.tsx";
 
-jest.mock("../model/store", () => ({
+jest.mock("../../model/store.ts", () => ({
   useStore: jest.fn() as any,
 }));
 

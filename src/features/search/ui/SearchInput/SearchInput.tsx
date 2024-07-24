@@ -1,8 +1,8 @@
 import { FC, useEffect } from "react";
 
-import { useStore } from "../model/store";
+import { useStore } from "../../model/store.ts";
 
-import { useDebounce } from "@/shared/hooks/useDebounce";
+import { useDebounce } from "@/shared/hooks/useDebounce.ts";
 
 export const SearchInput: FC = () => {
   const { searchTerm, setSearchTerm, fetchRepositories } = useStore(state => ({

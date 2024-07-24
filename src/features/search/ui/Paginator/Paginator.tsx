@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useStore } from "../model/store";
+import { useStore } from "../../model/store.ts";
 
 interface PaginatorProps {
   currentPage: number;
