@@ -3,11 +3,15 @@ export interface RepoOwner {
   avatarUrl: string;
 }
 
-export interface Repository {
-  id: string;
+export interface RepositoryData {
+  owner: RepoOwner;
   name: string;
   stargazerCount: number;
   updatedAt: string;
   url: string;
-  owner: RepoOwner;
+  description: string;
+  languages: {
+    nodes: { name: string }[];
+  };
 }
+

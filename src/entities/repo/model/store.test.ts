@@ -1,8 +1,8 @@
 import { renderHook, act } from "@testing-library/react";
 
-import { RepositoryNode } from "../types/repository";
+import { RepositoryNode } from "../../../features/search/types/repository.ts";
 
-import { useStore } from "./store";
+import { useStore } from "./store.ts";
 
 import client from "@/shared/api/github.ts";
 
@@ -58,7 +58,7 @@ describe("useStore", () => {
     });
 
     await act(async () => {
-      await result.current.fetchRepositories();
+      result.current.fetchRepositories();
     });
 
     expect(result.current.repos).toEqual(mockRepositories);

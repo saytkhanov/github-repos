@@ -1,6 +1,6 @@
 import { FC, useEffect } from "react";
 
-import { useStore } from "../../model/store.ts";
+import { useStore } from "@/entities/repo/model/store.ts";
 
 import { useDebounce } from "@/shared/hooks/useDebounce.ts";
 
@@ -11,7 +11,7 @@ export const SearchInput: FC = () => {
     fetchRepositories: state.fetchRepositories,
   }));
 
-  const debouncedSearchTerm = useDebounce(searchTerm, 500);
+  const debouncedSearchTerm = useDebounce(searchTerm, 1000);
 
   useEffect(() => {
     if (debouncedSearchTerm.trim()) {

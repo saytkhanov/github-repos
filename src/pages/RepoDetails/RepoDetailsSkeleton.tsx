@@ -26,9 +26,9 @@ export const RepoDetailsSkeleton: FC = () => {
           </li>
         ))}
       </ul>
-      <p>
+      <div>
         <Skeleton width="100%" height="80px" />
-      </p>
+      </div>
     </div>
   );
 };

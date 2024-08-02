@@ -1,14 +1,12 @@
-import { FC } from "react";
-
+import React from "react";
 import { Link } from "react-router-dom";
-
 import { Repository } from "./types";
 
 interface RepoListRowProps {
   repo: Repository;
 }
 
-export const RepoListRow: FC<RepoListRowProps> = ({ repo }) => {
+export const RepoListRow: React.FC<RepoListRowProps> = React.memo(({ repo }) => {
   return (
     <tr>
       <td className="name">
@@ -25,4 +23,4 @@ export const RepoListRow: FC<RepoListRowProps> = ({ repo }) => {
       </td>
     </tr>
   );
-};
+});

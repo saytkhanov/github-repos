@@ -4,6 +4,12 @@
   padding: 20px;
 }
 
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
 input[type="text"] {
   width: -webkit-fill-available;
   padding: 10px;

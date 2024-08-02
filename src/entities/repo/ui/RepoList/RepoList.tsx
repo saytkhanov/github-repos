@@ -3,8 +3,8 @@ import { FC } from "react";
 import "./RepoList.css";
 import { Repository } from "./types.ts";
 
-import { RepoListLoading } from "@/features/search/ui/RepoList/RepoListLoading.tsx";
-import { RepoListRow } from "@/features/search/ui/RepoList/RepoListRow.tsx";
+import { RepoListRow } from "./RepoListRow.tsx";
+import { RepoListSkeleton } from "./RepoListSkeleton.tsx";
 
 interface RepoListProps {
   repos: Repository[];
@@ -24,7 +24,7 @@ export const RepoList: FC<RepoListProps> = ({ repos, loading }) => {
       </thead>
       <tbody>
         {loading ? (
-          <RepoListLoading />
+          <RepoListSkeleton />
         ) : (
           repos.map(repo => <RepoListRow key={repo.id} repo={repo} />)
         )}

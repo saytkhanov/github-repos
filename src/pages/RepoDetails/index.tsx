@@ -1,3 +1,3 @@
-import { RepoDetails } from "./RepoDetails";
+import { RepoDetails } from "./RepoDetails.tsx";
 
 export default RepoDetails;

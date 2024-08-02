@@ -18,7 +18,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
     <div
       className="skeleton"
       style={{ width, height, borderRadius, ...style }}
-    ></div>
+    />
   );
 };
 
